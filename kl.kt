@@ -1,2 +1,12 @@
-val input1Number = input1.value.toInt()
-val input2Number = input2.value.toInt()
+val input1Number = try {
+    input1.value.toInt()
+} catch (e: Exception) {
+    result.value = "Error"
+    return@Button
+}
+val input2Number = try {
+    input2.value.toInt()
+} catch (e: Exception) {
+    result.value = "Error"
+    return@Button
+}
